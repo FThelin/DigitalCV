@@ -6,8 +6,10 @@ import Language from "../components/language";
 const Header = () => {
   return (
     <div style={headerStyles}>
-      <img src={Logo} alt="logo" style={{ height: "100%" }} />
-      <Navbar />
+      <div style={leftContainer}>
+        <img src={Logo} alt="logo" style={{ height: "100%" }} />
+        <Navbar />
+      </div>
       <Language />
     </div>
   );
@@ -23,4 +25,10 @@ const headerStyles = {
   alignItems: "center",
   justifyContent: "space-between",
   padding: "1rem"
+};
+
+const leftContainer = {
+  display: "flex",
+  height: "100%",
+  width: "50%"
 };
