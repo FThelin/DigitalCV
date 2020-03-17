@@ -2,15 +2,19 @@ import React from "react";
 import Logo from "../assets/logo.png";
 import Navbar from "../components/navbar";
 import Language from "../components/language";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = props => {
   return (
     <div style={headerStyles}>
       <div style={leftContainer}>
-        <img src={Logo} alt="logo" style={{ height: "100%" }} />
+        <Link to="/" style={{ width: "7%" }}>
+          <img src={Logo} alt="logo" style={{ height: "100%" }} />
+        </Link>
+
         <Navbar />
       </div>
-      <Language />
+      <Language changeLanguage={props.changeLanguage} />
     </div>
   );
 };

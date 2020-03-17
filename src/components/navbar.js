@@ -1,54 +1,53 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { createUseStyles } from "react-jss";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const mouseover = () => {
-    const li = document.querySelectorAll("li");
-    for (let i = 0; i < li.length; i++) {
-      li[i].addEventListener("mouseover", e => {
-        e.target.style.color = "#17252A";
-        e.target.style.cursor = "pointer";
-      });
+  const useStyles = createUseStyles({
+    ul: {
+      display: "flex",
+      listStyleType: "none",
+      width: "50%",
+      justifyContent: "space-around",
+      alignItems: "center",
+      fontSize: "0.9rem",
+      fontWeight: "600"
+    },
+    link: {
+      color: "#FEFFFF",
+      textDecoration: "none",
+      "&:hover": {
+        color: "#17252A"
+      }
     }
-  };
-
-  const mouseout = () => {
-    const li = document.querySelectorAll("li");
-    for (let i = 0; i < li.length; i++) {
-      li[i].addEventListener("mouseout", e => {
-        e.target.style.color = "#FEFFFF";
-        e.target.style.cursor = "pointer";
-      });
-    }
-  };
-
-  useEffect(() => {
-    mouseover();
-    mouseout();
-    return () => {
-      mouseover();
-      mouseout();
-    };
   });
 
+  const classes = useStyles();
+
   return (
-    <ul style={ulStyles}>
-      <li>ABOUT</li>
-      <li>PORTFOOLIO</li>
-      <li>SKILLS</li>
-      <li>CONTACT</li>
+    <ul className={classes.ul}>
+      <li>
+        <Link className={classes.link} to="/about">
+          ABOUT
+        </Link>
+      </li>
+      <li>
+        <Link className={classes.link} to="/portfolio">
+          PORTFOLIO
+        </Link>
+      </li>
+      <li>
+        <Link className={classes.link} to="/skills">
+          SKILLS
+        </Link>
+      </li>
+      <li>
+        <Link className={classes.link} to="/contact">
+          CONTACT
+        </Link>
+      </li>
     </ul>
   );
 };
 
 export default Navbar;
-
-const ulStyles = {
-  display: "flex",
-  listStyleType: "none",
-  width: "50%",
-  justifyContent: "space-around",
-  alignItems: "center",
-  color: "#FEFFFF",
-  fontSize: "0.9rem",
-  fontWeight: "600"
-};
