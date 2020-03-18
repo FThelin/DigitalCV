@@ -2,13 +2,19 @@ import React from "react";
 import Logo from "../assets/logo.png";
 import Navbar from "../components/navbar";
 import Language from "../components/language";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = props => {
   return (
     <div style={headerStyles}>
-      <img src={Logo} alt="logo" style={{ height: "100%" }} />
-      <Navbar />
-      <Language />
+      <div style={leftContainer}>
+        <Link to="/" style={{ width: "4rem" }}>
+          <img src={Logo} alt="logo" style={{ height: "100%" }} />
+        </Link>
+
+        <Navbar />
+      </div>
+      <Language changeLanguage={props.changeLanguage} />
     </div>
   );
 };
@@ -23,4 +29,10 @@ const headerStyles = {
   alignItems: "center",
   justifyContent: "space-between",
   padding: "1rem"
+};
+
+const leftContainer = {
+  display: "flex",
+  height: "100%",
+  width: "50%"
 };

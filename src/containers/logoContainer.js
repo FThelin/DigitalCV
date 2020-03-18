@@ -36,7 +36,7 @@ const flexContainer = {
 };
 
 const seperator = {
-  height: "8rem",
+  height: "25vh",
   display: "flex"
 };
 
