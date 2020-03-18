@@ -7,7 +7,7 @@ const Navbar = () => {
     ul: {
       display: "flex",
       listStyleType: "none",
-      width: "50%",
+      minWidth: "25rem",
       justifyContent: "space-around",
       alignItems: "center",
       fontSize: "0.9rem",

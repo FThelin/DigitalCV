@@ -15,6 +15,10 @@ function App() {
     language === "en" ? setLanguage("sv") : setLanguage("en");
   };
 
+  useEffect(() => {
+    console.log(language);
+  }, [language]);
+
   return (
     <Router>
       <Header changeLanguage={changeLanguage} />

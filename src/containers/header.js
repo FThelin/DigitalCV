@@ -8,7 +8,7 @@ const Header = props => {
   return (
     <div style={headerStyles}>
       <div style={leftContainer}>
-        <Link to="/" style={{ width: "7%" }}>
+        <Link to="/" style={{ width: "4rem" }}>
           <img src={Logo} alt="logo" style={{ height: "100%" }} />
         </Link>
 
