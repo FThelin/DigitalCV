@@ -6,15 +6,18 @@ import ProfilePicture from "../assets/profilepicture.JPG";
 const AboutBigCircle = props => {
   const useStyles = createUseStyles({
     bigCircle: {
-      height: "40rem",
-      width: "40rem",
-      backgroundColor: "#17252A",
+      height: "37rem",
+      width: "37rem",
+      backgroundColor: "rgba(37, 37, 37)",
       borderRadius: "50%",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      justifyContent: "space-around",
-      padding: "1rem"
+      justifyContent: "center",
+      padding: "1rem",
+      position: "relative",
+      bottom: "5.5rem",
+      left: "7rem"
     },
     img: {
       borderRadius: "50%"
