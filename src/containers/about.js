@@ -1,39 +1,52 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import AnimatedNumber from "animated-number-react";
-import AboutBigCircle from "../components/about-big-circle";
 import backgroundImage from "../assets/mebg.png";
+import AboutText from "../components/about-text";
+import Quote from "../components/quote";
+import Year from "../components/year";
 
-const About = props => {
+const About = () => {
   const useStyles = createUseStyles({
     wrapper: {
       height: "100vh",
+      width: "100%",
       backgroundColor: "#3aafa9",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center"
+      position: "absolute",
+      left: 0,
+      top: 0,
+      zIndex: 0
     },
     aboutStyles: {
-      display: "flex",
-      alignItems: "flex-end",
-      justifyContent: "center",
+      display: "grid",
+      gridTemplateColumns: "repeat(8, 1fr)",
+      gridTemplateRows: "repeat(4, 1fr)",
+      gridTemplateAreas: `
+          ". . . .  . . . ."
+          ". text text text . q q ."
+          ". text text text . q q."
+          ". . . year year . . ."
+        `,
       background: `url(${backgroundImage})`,
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "bottom center",
       width: "100%",
-      height: "100vh"
+      height: "100%",
+      position: "absolute",
+      left: 0,
+      top: 0,
+      zIndex: 1
     }
   });
 
   const classes = useStyles();
-  const formatValue = value => value.toFixed(0);
 
   return (
     <div className={classes.wrapper}>
+      <Year />
       <div className={classes.aboutStyles}>
-        {/* <AboutBigCircle language={props.language} /> */}
-        <AnimatedNumber value="1982" formatValue={formatValue} />
+        <AboutText />
+        <Quote />
       </div>
     </div>
   );

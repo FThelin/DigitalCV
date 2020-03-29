@@ -23,7 +23,8 @@ export default Header;
 
 const headerStyles = {
   width: "100%",
-  position: "fixed",
+  position: "relative",
+  zIndex: 2,
   height: "5rem",
   display: "flex",
   alignItems: "center",
