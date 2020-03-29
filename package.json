@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "animated-number-react": "0.0.2",
     "react": "^16.13.0",
+    "react-animated-number": "^0.4.4",
     "react-dom": "^16.13.0",
     "react-jss": "^10.1.1",
     "react-router-dom": "^5.1.2",

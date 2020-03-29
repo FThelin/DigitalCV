@@ -2,7 +2,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import AnimatedNumber from "animated-number-react";
 import AboutBigCircle from "../components/about-big-circle";
-import backgroundImage from "../assets/fippebg2.png";
+import backgroundImage from "../assets/mebg.png";
 
 const About = props => {
   const useStyles = createUseStyles({
@@ -14,14 +14,13 @@ const About = props => {
       alignItems: "center"
     },
     aboutStyles: {
-      width: "100%",
       display: "flex",
       alignItems: "flex-end",
       justifyContent: "center",
       background: `url(${backgroundImage})`,
-      backgroundSize: "cover",
+      backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
-      backgroundPosition: "top center",
+      backgroundPosition: "bottom center",
       width: "100%",
       height: "100vh"
     }
@@ -33,8 +32,8 @@ const About = props => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.aboutStyles}>
-        {/* <AboutBigCircle language={props.language} />
-        <AnimatedNumber value="1982" formatValue={formatValue} /> */}
+        {/* <AboutBigCircle language={props.language} /> */}
+        <AnimatedNumber value="1982" formatValue={formatValue} />
       </div>
     </div>
   );
