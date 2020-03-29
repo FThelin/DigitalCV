@@ -4,21 +4,34 @@ import { createUseStyles } from "react-jss";
 
 const Year = () => {
   const useStyles = createUseStyles({
+    numberBox: {
+      height: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    },
     number: {
+      display: "flex",
+      width: "100%",
+      alignItems: "center",
+      justifyContent: "center",
+      height: "50vh",
       gridArea: "year",
-      color: "#2B7A78",
-      textAlign: "center",
-      fontSize: "30rem",
-      marginTop: "3rem",
-      fontFamily: "'Sarpanch', sans-serif"
+      color: "#399c9a",
+      fontSize: "35rem",
+      transform: "scale(1, 2)",
+      fontFamily: "'Sarpanch', sans-serif",
+      overflow: "hidden"
     }
   });
 
   const formatValue = value => value.toFixed(0);
   const classes = useStyles();
   return (
-    <div className={classes.number}>
-      <AnimatedNumber value="2020" formatValue={formatValue} />
+    <div className={classes.numberBox}>
+      <div className={classes.number}>
+        <AnimatedNumber value="2020" formatValue={formatValue} />
+      </div>
     </div>
   );
 };

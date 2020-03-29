@@ -22,6 +22,7 @@ const Header = props => {
 export default Header;
 
 const headerStyles = {
+  backgroundColor: "transparent",
   width: "100%",
   position: "relative",
   zIndex: 2,

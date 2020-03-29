@@ -31,7 +31,7 @@ const About = () => {
       backgroundRepeat: "no-repeat",
       backgroundPosition: "bottom center",
       width: "100%",
-      height: "100%",
+      height: "100vh",
       position: "absolute",
       left: 0,
       top: 0,

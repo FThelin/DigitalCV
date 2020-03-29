@@ -1,5 +1,5 @@
 .logoContainer {
-  height: 100vh;
+  height: calc(100vh - 5rem);
   display: flex;
   justify-content: center;
   align-items: center;
