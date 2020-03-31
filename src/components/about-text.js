@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { createUseStyles } from "react-jss";
+import { LanguageContext } from "../context/languageContext";
+import texts from "../languagesText";
 
 const AboutText = () => {
+  const { language } = useContext(LanguageContext);
+
   const useStyles = createUseStyles({
     div: {
       gridArea: "text"
@@ -12,8 +16,16 @@ const AboutText = () => {
 
   return (
     <div className={classes.div}>
-      <h1>Om mig</h1>
-      <p>Bla bla...</p>
+      <h1>
+        {language === "sv"
+          ? texts[0].swedish.aboutHeading
+          : texts[1].english.aboutHeading}
+      </h1>
+      <p>
+        {language === "sv"
+          ? texts[0].swedish.aboutText
+          : texts[1].english.aboutText}
+      </p>
     </div>
   );
 };

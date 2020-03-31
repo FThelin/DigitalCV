@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { createUseStyles } from "react-jss";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../context/languageContext";
 
 const Navbar = () => {
+  const { language } = useContext(LanguageContext);
+
   const useStyles = createUseStyles({
     ul: {
       display: "flex",
@@ -28,22 +31,22 @@ const Navbar = () => {
     <ul className={classes.ul}>
       <li>
         <Link className={classes.link} to="/about">
-          ABOUT
+          {language === "sv" ? "OM MIG" : "ABOUT"}
         </Link>
       </li>
       <li>
         <Link className={classes.link} to="/portfolio">
-          PORTFOLIO
+          {language === "sv" ? "PORTFÖLJ" : "PORTFOLIO"}
         </Link>
       </li>
       <li>
         <Link className={classes.link} to="/skills">
-          SKILLS
+          {language === "sv" ? "FÄRDIGHETER" : "SKILLS"}
         </Link>
       </li>
       <li>
         <Link className={classes.link} to="/contact">
-          CONTACT
+          {language === "sv" ? "KONTAKT" : "CONTACT"}
         </Link>
       </li>
     </ul>

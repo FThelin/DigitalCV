@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "../assets/logo.png";
 import Navbar from "../components/navbar";
 import Language from "../components/language";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../context/languageContext";
 
 const Header = props => {
+  const { changeLanguage } = useContext(LanguageContext);
+
   return (
     <div style={headerStyles}>
       <div style={leftContainer}>
@@ -14,7 +17,7 @@ const Header = props => {
 
         <Navbar />
       </div>
-      <Language changeLanguage={props.changeLanguage} />
+      <Language changeLanguage={changeLanguage} />
     </div>
   );
 };

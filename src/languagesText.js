@@ -1,16 +1,18 @@
+const d = new Date();
+const year = d.getYear();
+let age = year - 82;
+
 const texts = [
   {
     swedish: {
       aboutHeading: "Om mig",
-      aboutText:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500sSV"
+      aboutText: `Efter att ha jobbat 15 år med hamnverksamhet och många år som processägare och kravställare inom IT bestämde jag mig för att jag inte vill beställa funktionalitet, jag vill bygga den. Jag har hunnit bli ${age} år och studerar till Front-End Developer. Vill du veta mer? Navigera med pilarna till viktiga årtal i mitt liv.`
     }
   },
   {
     english: {
       aboutHeading: "About me",
-      aboutText:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passagesEN"
+      aboutText: `After 15 years in the shipping industry and many years as process owner and specifier within IT, I decided that I don´t want to order the functionality, I want to build it. I am now ${age} years old and currently studying to become a Front-End Developer. Do you want to know more? Navigate using the arrows to view important milestones in my life.`
     }
   }
 ];

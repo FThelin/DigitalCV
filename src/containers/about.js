@@ -22,8 +22,8 @@ const About = () => {
       gridTemplateRows: "repeat(4, 1fr)",
       gridTemplateAreas: `
           ". . . .  . . . ."
-          ". text text text . q q ."
-          ". text text text . q q."
+          ". text text . . q q ."
+          ". text text . . q q."
           ". . . year year . . ."
         `,
       background: `url(${backgroundImage})`,

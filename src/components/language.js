@@ -27,8 +27,8 @@ const Language = props => {
   });
 
   const classes = useStyles();
-  const [swedishhActive, setSwedishActive] = useState(classes.active);
-  const [englishActive, setEnglishActive] = useState(null);
+  const [swedishhActive, setSwedishActive] = useState(null);
+  const [englishActive, setEnglishActive] = useState(classes.active);
 
   const handleLanguage = () => {
     swedishhActive === null
