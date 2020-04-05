@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
 import backgroundImage from "../assets/mebg.png";
 import AboutText from "../components/about-text";
@@ -6,6 +6,12 @@ import Quote from "../components/quote";
 import Year from "../components/year";
 
 const About = () => {
+  const [year, setYear] = useState(2020);
+
+  const changeYear = newYear => {
+    setYear(newYear);
+  };
+
   const useStyles = createUseStyles({
     wrapper: {
       height: "100vh",
@@ -43,9 +49,9 @@ const About = () => {
 
   return (
     <div className={classes.wrapper}>
-      <Year />
+      <Year year={year} />
       <div className={classes.aboutStyles}>
-        <AboutText />
+        <AboutText changeYear={changeYear} year={year} />
         <Quote />
       </div>
     </div>

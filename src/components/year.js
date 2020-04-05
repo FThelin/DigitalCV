@@ -2,7 +2,7 @@ import React from "react";
 import AnimatedNumber from "animated-number-react";
 import { createUseStyles } from "react-jss";
 
-const Year = () => {
+const Year = props => {
   const useStyles = createUseStyles({
     numberBox: {
       height: "100vh",
@@ -30,7 +30,7 @@ const Year = () => {
   return (
     <div className={classes.numberBox}>
       <div className={classes.number}>
-        <AnimatedNumber value="2020" formatValue={formatValue} />
+        <AnimatedNumber value={props.year} formatValue={formatValue} />
       </div>
     </div>
   );
