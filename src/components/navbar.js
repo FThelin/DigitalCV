@@ -14,15 +14,15 @@ const Navbar = () => {
       justifyContent: "space-around",
       alignItems: "center",
       fontSize: "0.9rem",
-      fontWeight: "600"
+      fontWeight: "600",
     },
     link: {
       color: "#FEFFFF",
       textDecoration: "none",
       "&:hover": {
-        color: "#17252A"
-      }
-    }
+        color: "#17252A",
+      },
+    },
   });
 
   const classes = useStyles();
@@ -41,7 +41,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link className={classes.link} to="/skills">
-          {language === "sv" ? "FÄRDIGHETER" : "SKILLS"}
+          {language === "sv" ? "KOMPETENS" : "SKILLS"}
         </Link>
       </li>
       <li>

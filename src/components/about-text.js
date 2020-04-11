@@ -7,10 +7,13 @@ const AboutText = (props) => {
   const { language } = useContext(LanguageContext);
   const milestones = [1982, 2001, 2005, 2007, 2019, 2020];
   const [milestoneIndex, setMilestoneIndex] = useState(5);
+  const [showArrows, setShowArrows] = useState(false);
+  const [showHistory, setShowHistory] = useState(true);
 
   const useStyles = createUseStyles({
     div: {
       gridArea: "text",
+      width: "22rem",
     },
     h1: {
       marginBottom: "1rem",
@@ -22,7 +25,7 @@ const AboutText = (props) => {
       fontSize: "2rem",
       display: "flex",
       alignItems: "center",
-      justifyContent: "between",
+      justifyContent: "space-between",
       width: "100%",
     },
     arrow: {
@@ -35,6 +38,21 @@ const AboutText = (props) => {
       marginLeft: "1rem",
       fontSize: "1.2rem",
       fontWeight: "bold",
+    },
+    history: {
+      width: "100%",
+      border: "none",
+      height: "2.5rem",
+      backgroundColor: "#17252A",
+      color: "#DEF2F1",
+      fontSize: "1.2rem",
+      "&:hover": {
+        backgroundColor: "#2B7A78",
+        cursor: "pointer",
+      },
+      "&:focus": {
+        outline: "none",
+      },
     },
   });
 
@@ -91,32 +109,63 @@ const AboutText = (props) => {
     return heading;
   };
 
+  const switchToArrows = () => {
+    setShowHistory(false);
+    setShowArrows(true);
+    props.changeYear(1982);
+    setMilestoneIndex(0);
+  };
+
   const classes = useStyles();
 
   return (
     <div className={classes.div}>
       <h1 className={classes.h1}>{changeHeading()}</h1>
       <p className={classes.p}>{changeText()}</p>
-      <div className={classes.i}>
-        {props.year !== 1982 && (
-          <div style={{ display: "flex", alignItems: "center" }}>
+      {showHistory && (
+        <button className={classes.history} onClick={switchToArrows}>
+          {language === "sv" ? "Historia" : "History"}
+        </button>
+      )}
+      {showArrows && (
+        <div className={classes.i}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <i
+              style={
+                props.year !== 1982
+                  ? { visibility: "visible" }
+                  : { visibility: "hidden" }
+              }
               onClick={goBackwards}
               className={`fas fa-arrow-circle-left ${classes.arrow}`}
             ></i>
             <p className={classes.year}>{milestones[milestoneIndex - 1]}</p>
           </div>
-        )}
-        {props.year !== 2020 && (
-          <div style={{ display: "flex", alignItems: "center" }}>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <p className={classes.year}>{milestones[milestoneIndex + 1]}</p>
             <i
+              style={
+                props.year !== 2020
+                  ? { visibility: "visible" }
+                  : { visibility: "hidden" }
+              }
               onClick={goForwards}
               className={`fas fa-arrow-circle-right ${classes.arrow}`}
             ></i>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
