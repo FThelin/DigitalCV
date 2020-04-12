@@ -7,10 +7,12 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "animated-number-react": "0.0.2",
+    "pure-react-carousel": "^1.27.0",
     "react": "^16.13.0",
     "react-animated-number": "^0.4.4",
     "react-dom": "^16.13.0",
     "react-jss": "^10.1.1",
+    "react-responsive-carousel": "^3.2.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-spring": "^8.0.27"
