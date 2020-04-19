@@ -1,42 +1,50 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import "../btn.scss";
 
 const Project = (props) => {
   const useStyles = createUseStyles({
     card: {
       display: "grid",
+      gridGap: "0.5rem",
       gridTemplateColumns: "70% 30%",
       gridTemplateRows: "repeat(6, 1fr)",
       gridTemplateAreas: '"i t" "i o" "i x" "i x" "i x" "l l"',
       width: "100%",
-      background: "#FEFFFF",
       color: "#3aafa9",
     },
     img: {
       gridArea: "i",
-      position: "relative",
-      bottom: "2rem",
-      left: "2rem",
-      boxShadow: "2px 2px 8px black",
     },
     title: {
       gridArea: "t",
-      padding: "3rem 1rem 0 3rem",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
       fontSize: "2rem",
+      backgroundColor: "rgba(100,100,100,0.3)",
     },
     text: {
       gridArea: "x",
-      padding: "0 1rem 0 3rem",
-      color: "#17252A",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      color: "#3aafa9",
+      backgroundColor: "rgba(100,100,100,0.3)",
+      padding: "2rem",
     },
     tools: {
       gridArea: "o",
       color: "gray",
-      fontSize: "0.8rem",
-      fontStyle: "italic",
-      padding: "0 1rem 0 3rem",
+      fontSize: "3rem",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "rgba(100,100,100,0.3)",
     },
     links: {
+      padding: "1.5rem",
+      backgroundColor: "rgba(100,100,100,0.3)",
       gridArea: "l",
       color: "#2B7A78",
       textDecoration: "none",
@@ -53,18 +61,16 @@ const Project = (props) => {
 
       <h4 className={classes.title}>{props.title}</h4>
       <p className={classes.text}>{props.text}</p>
-      <p className={classes.tools}>{props.tools}</p>
+      <div className={classes.tools}>{props.tools}</div>
 
-      <a
-        href={props.repoLink}
-        className={classes.links}
-        style={{ marginRight: "1rem" }}
-      >
-        Link to repo
-      </a>
-      <a href={props.siteLink} className={classes.links}>
-        Link to site
-      </a>
+      <div className={classes.links}>
+        <a className="btn" href={props.repoLink}>
+          Github Repo
+        </a>
+        <a className="btn" href={props.siteLink}>
+          Website
+        </a>
+      </div>
     </div>
   );
 };

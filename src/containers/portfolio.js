@@ -42,7 +42,7 @@ const Portfolio = () => {
             }
             repoLink="https://github.com/FThelin/WebShop"
             siteLink="https://epic-varahamihira-8e19d0.netlify.com/"
-            tools="React/Grommet"
+            tools={<i className="fab fa-react"></i>}
           />
         </div>
         <div>
