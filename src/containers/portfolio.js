@@ -21,6 +21,7 @@ const Portfolio = () => {
     },
     text: {
       textAlign: "center",
+      margin: "2rem 0",
     },
   });
   const classes = useStyles();
