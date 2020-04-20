@@ -10,12 +10,17 @@ const Skills = () => {
       justifyContent: "center",
       alignItems: "center",
     },
+    heading: {
+      textAlign: "center",
+      fontSize: "4rem",
+      marginTop: "2rem",
+    },
   });
   const classes = useStyles();
 
   return (
     <div className={classes.box}>
-      <h1>SKILLS</h1>
+      <h1 className={classes.heading}>SKILLS</h1>
       <Chart />
     </div>
   );

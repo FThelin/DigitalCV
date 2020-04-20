@@ -29,7 +29,7 @@ const Project = (props) => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      color: "#3aafa9",
+      color: "#DEF2F1",
       backgroundColor: "rgba(100,100,100,0.3)",
       padding: "2rem",
     },

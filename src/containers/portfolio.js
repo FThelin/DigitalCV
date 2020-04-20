@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 import Project from "../components/project";
 import AdamFredickImage from "../assets/adamfredick.png";
 import MovieStarImage from "../assets/moviestar.png";
+import RubikImage from "../assets/rubik.jpg";
 import { LanguageContext } from "../context/languageContext";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -16,7 +17,6 @@ const Portfolio = () => {
     },
     heading: {
       textAlign: "center",
-      //fontFamily: "'Mansalva', cursive",
       fontSize: "4rem",
     },
     text: {
@@ -56,27 +56,32 @@ const Portfolio = () => {
             }
             repoLink="https://github.com/Stenis76/moviesearch"
             siteLink="#"
-            tools="React"
+            tools={<i className="fab fa-react"></i>}
           />
         </div>
         <div>
           <Project
-            img={AdamFredickImage}
-            title="ADAM FREDICK"
+            img={RubikImage}
+            title="RUBIK`S CUBE ALGS"
             text={
               language === "sv"
-                ? "Webshop med produkter, kundvagn, utcheckning och betalning. Kläder av den franska designern Adam Fredick."
-                : "Webshop with products, cart, checkout and payment. Clothes by the french designer Adam Fredick"
+                ? "Använde Node.js och Express.js för att skapa REST-API med CRUD funktionalitet samt ett UI för att kommunicera med servern. Applikationen hanterar algoritmer för sista lagret när man löser en Rubik´s kub"
+                : "Used Node.js end Express.js to create a REST-API with CRUD functionality and an UI to communicate with the server. The application handles algorithms for last layer when solving a Rubik´s cube."
             }
-            repoLink="https://github.com/FThelin/WebShop"
-            siteLink="https://epic-varahamihira-8e19d0.netlify.com/"
-            tools="React/Grommet"
+            repoLink="https://github.com/FThelin/RubikAlgs"
+            siteLink="#"
+            tools={
+              <div>
+                <i className="fab fa-react"></i>
+                <i class="fab fa-node-js"></i>
+              </div>
+            }
           />
         </div>
         <div>
           <Project
             img={AdamFredickImage}
-            title="ADAM FREDICK"
+            title="RUBIK`S CUBE ALGS"
             text={
               language === "sv"
                 ? "Webshop med produkter, kundvagn, utcheckning och betalning. Kläder av den franska designern Adam Fredick."
