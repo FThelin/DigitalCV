@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Chart from "../components/chart";
 import { createUseStyles } from "react-jss";
+import { LanguageContext } from "../context/languageContext";
 
 const Skills = () => {
+  const { language } = useContext(LanguageContext);
   const useStyles = createUseStyles({
     box: {
       display: "flex",
@@ -20,7 +22,9 @@ const Skills = () => {
 
   return (
     <div className={classes.box}>
-      <h1 className={classes.heading}>SKILLS</h1>
+      <h1 className={classes.heading}>
+        {language === "sv" ? "FÄRDIGHETER" : "SKILLS"}
+      </h1>
       <Chart />
     </div>
   );

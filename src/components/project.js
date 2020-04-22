@@ -64,11 +64,8 @@ const Project = (props) => {
       <div className={classes.tools}>{props.tools}</div>
 
       <div className={classes.links}>
-        <a className="btn" href={props.repoLink}>
+        <a target="_blank" className="btn" href={props.repoLink}>
           Github Repo
-        </a>
-        <a className="btn" href={props.siteLink}>
-          Website
         </a>
       </div>
     </div>

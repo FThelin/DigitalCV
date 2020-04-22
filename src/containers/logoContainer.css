@@ -17,3 +17,15 @@
   cursor: pointer;
   line-height: 80px;
 }
+
+@media screen and (max-width: 768px) {
+  .transitions-item {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .transitions-item {
+    font-size: 2.5em;
+  }
+}

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import ContactWay from "../components/contactway";
 import { createUseStyles } from "react-jss";
+import { LanguageContext } from "../context/languageContext";
 
 const Contact = () => {
+  const { language } = useContext(LanguageContext);
   const useStyles = createUseStyles({
     box: {
       display: "flex",
@@ -18,7 +20,9 @@ const Contact = () => {
   const classes = useStyles();
   return (
     <div className={classes.box}>
-      <h1 className={classes.heading}>CONTACT</h1>
+      <h1 className={classes.heading}>
+        {language === "sv" ? "KONTAKT" : "CONTACT"}
+      </h1>
       <ContactWay
         icon={<i class="fas fa-envelope"></i>}
         path="mailto:fredrikthelin82@gmail.com"

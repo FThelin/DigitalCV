@@ -3,24 +3,26 @@ import { createUseStyles } from "react-jss";
 import { Link } from "react-router-dom";
 import { LanguageContext } from "../context/languageContext";
 
-const Navbar = () => {
+const MobileNav = (props) => {
   const { language } = useContext(LanguageContext);
 
   const useStyles = createUseStyles({
     ul: {
       display: "flex",
+      flexDirection: "column",
       listStyleType: "none",
-      minWidth: "25rem",
       justifyContent: "space-around",
       alignItems: "center",
-      fontSize: "0.9rem",
+      fontSize: "1.3rem",
       fontWeight: "600",
+      height: "50%",
     },
     link: {
-      color: "#FEFFFF",
+      color: "#3aafa9",
+      marginTop: "2rem",
       textDecoration: "none",
       "&:hover": {
-        color: "#17252A",
+        color: "#2B7A78",
       },
     },
   });
@@ -28,24 +30,28 @@ const Navbar = () => {
   const classes = useStyles();
 
   return (
-    <ul id="navbar" className={classes.ul}>
+    <ul className={classes.ul}>
       <li>
-        <Link className={classes.link} to="/about">
+        <Link className={classes.link} to="/about" onClick={props.closeMenu}>
           {language === "sv" ? "OM MIG" : "ABOUT"}
         </Link>
       </li>
       <li>
-        <Link className={classes.link} to="/portfolio">
+        <Link
+          className={classes.link}
+          to="/portfolio"
+          onClick={props.closeMenu}
+        >
           {language === "sv" ? "PORTFÖLJ" : "PORTFOLIO"}
         </Link>
       </li>
       <li>
-        <Link className={classes.link} to="/skills">
+        <Link className={classes.link} to="/skills" onClick={props.closeMenu}>
           {language === "sv" ? "KOMPETENS" : "SKILLS"}
         </Link>
       </li>
       <li>
-        <Link className={classes.link} to="/contact">
+        <Link className={classes.link} to="/contact" onClick={props.closeMenu}>
           {language === "sv" ? "KONTAKT" : "CONTACT"}
         </Link>
       </li>
@@ -53,4 +59,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default MobileNav;

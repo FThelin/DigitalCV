@@ -1,0 +1,39 @@
+.mobile-menu {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 5rem);
+  left: 0;
+  top: 5rem;
+  background-color: #17252a;
+  animation: mobilenav 300ms ease-out;
+}
+
+@keyframes mobilenav {
+  from {
+    height: 0;
+  }
+  to {
+    height: 92vh;
+  }
+}
+
+.hamburger {
+  height: 5rem;
+  padding: 0.6rem;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  #navbar {
+    display: none;
+  }
+  #logo {
+    display: none;
+  }
+  .transitions-item {
+    font-size: 1em;
+  }
+}

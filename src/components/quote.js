@@ -19,10 +19,6 @@ const Quote = () => {
         "No problem can withstand the assault of sustained thinking."
         <br /> — Voltaire
       </p>
-      <p className={classes.quoteStyles} style={{ margin: "4rem 0 0 5rem" }}>
-        "..or some serious googling.."
-        <br /> — F. Thelin
-      </p>
     </div>
   );
 };

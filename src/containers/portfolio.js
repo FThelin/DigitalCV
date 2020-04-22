@@ -4,6 +4,8 @@ import Project from "../components/project";
 import AdamFredickImage from "../assets/adamfredick.png";
 import MovieStarImage from "../assets/moviestar.png";
 import RubikImage from "../assets/rubik.jpg";
+import CiggenImage from "../assets/ciggen.JPG";
+import FlutterImage from "../assets/flutter.png";
 import { LanguageContext } from "../context/languageContext";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -28,8 +30,14 @@ const Portfolio = () => {
 
   return (
     <div className={classes.box}>
-      <h1 className={classes.heading}>PORTFOLIO</h1>
-      <p className={classes.text}>Some text</p>
+      <h1 className={classes.heading}>
+        {language === "sv" ? "PORTFÖLJ" : "PORTFOLIO"}
+      </h1>
+      <p className={classes.text}>
+        {language === "sv"
+          ? "Några av mina projekt hittils. Alla byggt som skolprojekt i en del av min Front-End utbildning."
+          : "Some of my projects so far. All as school projects as a part of my studying to become a Front-End developer."}
+      </p>
       <Carousel showArrows={true} showThumbs={true}>
         <div>
           <Project
@@ -38,10 +46,9 @@ const Portfolio = () => {
             text={
               language === "sv"
                 ? "Webshop med produkter, kundvagn, utcheckning och betalning. Kläder av den franska designern Adam Fredick."
-                : "Webshop with products, cart, checkout and payment. Clothes by the french designer Adam Fredick"
+                : "Webshop with products, cart, checkout and payment. Clothes by the french designer Adam Fredick."
             }
             repoLink="https://github.com/FThelin/WebShop"
-            siteLink="https://epic-varahamihira-8e19d0.netlify.com/"
             tools={<i className="fab fa-react"></i>}
           />
         </div>
@@ -55,7 +62,6 @@ const Portfolio = () => {
                 : "Movie app where you can search for movies in different categories. Used The Movie Database API"
             }
             repoLink="https://github.com/Stenis76/moviesearch"
-            siteLink="#"
             tools={<i className="fab fa-react"></i>}
           />
         </div>
@@ -69,7 +75,6 @@ const Portfolio = () => {
                 : "Used Node.js end Express.js to create a REST-API with CRUD functionality and an UI to communicate with the server. The application handles algorithms for last layer when solving a Rubik´s cube."
             }
             repoLink="https://github.com/FThelin/RubikAlgs"
-            siteLink="#"
             tools={
               <div>
                 <i className="fab fa-react"></i>
@@ -80,30 +85,28 @@ const Portfolio = () => {
         </div>
         <div>
           <Project
-            img={AdamFredickImage}
-            title="RUBIK`S CUBE ALGS"
+            img={CiggenImage}
+            title="CIGGEN"
             text={
               language === "sv"
-                ? "Webshop med produkter, kundvagn, utcheckning och betalning. Kläder av den franska designern Adam Fredick."
-                : "Webshop with products, cart, checkout and payment. Clothes by the french designer Adam Fredick"
+                ? "Spel byggt med P5.js. Använd dina byggstenar för att få Jonathan att nå fram till sin kära cigarett. Ju snabbare desto bättre."
+                : "Game built with P5.js. Use your building blocks to help Jonathan reach his precious cigarette as fast as possible."
             }
-            repoLink="https://github.com/FThelin/WebShop"
-            siteLink="https://epic-varahamihira-8e19d0.netlify.com/"
-            tools="React/Grommet"
+            repoLink="https://github.com/Stenis76/ModularMario"
+            tools="P5.js"
           />
         </div>
         <div>
           <Project
-            img={AdamFredickImage}
-            title="ADAM FREDICK"
+            img={FlutterImage}
+            title="WORLD TIME"
             text={
               language === "sv"
-                ? "Webshop med produkter, kundvagn, utcheckning och betalning. Kläder av den franska designern Adam Fredick."
-                : "Webshop with products, cart, checkout and payment. Clothes by the french designer Adam Fredick"
+                ? "Mobilapp som visar aktuell tid i några av världens städer. Byggd med Flutter och World Time API."
+                : "Mobile app that shows current time in some of the cities around the world. Built with Flutter and the World Time API"
             }
-            repoLink="https://github.com/FThelin/WebShop"
-            siteLink="https://epic-varahamihira-8e19d0.netlify.com/"
-            tools="React/Grommet"
+            repoLink="#"
+            tools="Flutter"
           />
         </div>
       </Carousel>
