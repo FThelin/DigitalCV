@@ -2,13 +2,13 @@ import React from "react";
 import AnimatedNumber from "animated-number-react";
 import { createUseStyles } from "react-jss";
 
-const Year = props => {
+const Year = (props) => {
   const useStyles = createUseStyles({
     numberBox: {
       height: "100vh",
       display: "flex",
       alignItems: "center",
-      justifyContent: "center"
+      justifyContent: "center",
     },
     number: {
       display: "flex",
@@ -18,14 +18,14 @@ const Year = props => {
       height: "50vh",
       gridArea: "year",
       color: "#399c9a",
-      fontSize: "35rem",
+      fontSize: "35vw",
       transform: "scale(1, 2)",
       fontFamily: "'Sarpanch', sans-serif",
-      overflow: "hidden"
-    }
+      overflow: "hidden",
+    },
   });
 
-  const formatValue = value => value.toFixed(0);
+  const formatValue = (value) => value.toFixed(0);
   const classes = useStyles();
   return (
     <div className={classes.numberBox}>

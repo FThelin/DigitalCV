@@ -37,3 +37,69 @@
     font-size: 1em;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #aboutTextContainer {
+    width: 16rem;
+  }
+  #quote {
+    margin-left: 5rem;
+    width: 90%;
+  }
+  #portfolioContainer {
+    width: 90%;
+  }
+  #portfolioContainer h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #aboutStyles {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 15% 30% 30% 25%;
+    grid-template-areas:
+      "."
+      "text"
+      "year"
+      "q";
+  }
+
+  #aboutTextContainer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #quote {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #aboutStyles {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      ". ."
+      "text text"
+      "year year"
+      "q q";
+  }
+
+  #aboutTextContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #aboutTextHeading {
+    font-size: 1.5rem;
+  }
+  #aboutText {
+    font-size: 0.9rem;
+  }
+  #quote {
+    font-size: 0.9rem;
+    margin: 0 auto;
+    width: 80%;
+  }
+}

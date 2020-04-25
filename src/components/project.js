@@ -7,14 +7,18 @@ const Project = (props) => {
     card: {
       display: "grid",
       gridGap: "0.5rem",
-      gridTemplateColumns: "70% 30%",
-      gridTemplateRows: "repeat(6, 1fr)",
-      gridTemplateAreas: '"i t" "i o" "i x" "i x" "i x" "l l"',
-      width: "100%",
+      gridTemplateColumns: "59rem auto",
+      gridTemplateRows: "5rem 5rem 19rem auto",
+      gridTemplateAreas: '"i t" "i o" "i x" "l l"',
       color: "#3aafa9",
+      backgroundColor: "#17252A",
+      margin: "4rem 0",
+      height: "60vh",
     },
     img: {
       gridArea: "i",
+      objectFit: "cover",
+      width: "100%",
     },
     title: {
       gridArea: "t",
@@ -51,6 +55,18 @@ const Project = (props) => {
       "&:hover": {
         color: "#3AAFA9",
         cursor: "pointer",
+      },
+    },
+    "@media (max-width: 1024px)": {
+      card: {
+        gridTemplateColumns: "72% 28%",
+        gridTemplateRows: "15% 15% 36% 34%",
+      },
+      title: {
+        fontSize: "1rem",
+      },
+      links: {
+        padding: "2rem",
       },
     },
   });

@@ -8,7 +8,7 @@ import Year from "../components/year";
 const About = () => {
   const [year, setYear] = useState(2020);
 
-  const changeYear = newYear => {
+  const changeYear = (newYear) => {
     setYear(newYear);
   };
 
@@ -20,7 +20,7 @@ const About = () => {
       position: "absolute",
       left: 0,
       top: 0,
-      zIndex: 0
+      zIndex: 0,
     },
     aboutStyles: {
       display: "grid",
@@ -41,8 +41,8 @@ const About = () => {
       position: "absolute",
       left: 0,
       top: 0,
-      zIndex: 1
-    }
+      zIndex: 1,
+    },
   });
 
   const classes = useStyles();
@@ -50,7 +50,7 @@ const About = () => {
   return (
     <div className={classes.wrapper}>
       <Year year={year} />
-      <div className={classes.aboutStyles}>
+      <div id="aboutStyles" className={classes.aboutStyles}>
         <AboutText changeYear={changeYear} year={year} />
         <Quote />
       </div>

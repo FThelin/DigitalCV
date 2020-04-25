@@ -15,7 +15,7 @@ const Quote = () => {
   const classes = useStyles();
   return (
     <div style={{ gridArea: "q" }}>
-      <p className={classes.quoteStyles}>
+      <p id="quote" className={classes.quoteStyles}>
         "No problem can withstand the assault of sustained thinking."
         <br /> — Voltaire
       </p>

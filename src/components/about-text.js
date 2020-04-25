@@ -119,11 +119,19 @@ const AboutText = (props) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.div}>
-      <h1 className={classes.h1}>{changeHeading()}</h1>
-      <p className={classes.p}>{changeText()}</p>
+    <div id="aboutTextContainer" className={classes.div}>
+      <h1 id="aboutTextHeading" className={classes.h1}>
+        {changeHeading()}
+      </h1>
+      <p id="aboutText" className={classes.p}>
+        {changeText()}
+      </p>
       {showHistory && (
-        <button className={classes.history} onClick={switchToArrows}>
+        <button
+          id="aboutButton"
+          className={classes.history}
+          onClick={switchToArrows}
+        >
           {language === "sv" ? "Historia" : "History"}
         </button>
       )}
