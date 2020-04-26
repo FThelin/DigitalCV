@@ -17,6 +17,12 @@ const Skills = () => {
       fontSize: "4rem",
       marginTop: "2rem",
     },
+    "@media (max-width: 400px)": {
+      heading: {
+        fontSize: "2rem",
+        marginTop: "1rem",
+      },
+    },
   });
   const classes = useStyles();
 

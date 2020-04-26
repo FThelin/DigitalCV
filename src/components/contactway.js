@@ -28,6 +28,18 @@ const ContactWay = (props) => {
         color: "gray",
       },
     },
+    "@media (max-width: 400px)": {
+      box: {
+        width: "15rem",
+        height: "3.5rem",
+      },
+      icon: {
+        fontSize: "2rem",
+      },
+      link: {
+        fontSize: "0.8rem",
+      },
+    },
   });
   const classes = useStyles();
   return (

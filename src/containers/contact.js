@@ -16,6 +16,11 @@ const Contact = () => {
       fontSize: "4rem",
       margin: "2rem 0",
     },
+    "@media (max-width: 400px)": {
+      heading: {
+        fontSize: "2rem",
+      },
+    },
   });
   const classes = useStyles();
   return (
@@ -24,17 +29,17 @@ const Contact = () => {
         {language === "sv" ? "KONTAKT" : "CONTACT"}
       </h1>
       <ContactWay
-        icon={<i class="fas fa-envelope"></i>}
+        icon={<i className="fas fa-envelope"></i>}
         path="mailto:fredrikthelin82@gmail.com"
         text="fredrikthelin82@gmail.com"
       />
       <ContactWay
-        icon={<i class="fab fa-github"></i>}
+        icon={<i className="fab fa-github"></i>}
         path="https://github.com/FThelin"
         text="Github"
       />
       <ContactWay
-        icon={<i class="fab fa-linkedin"></i>}
+        icon={<i className="fab fa-linkedin"></i>}
         path="https://www.linkedin.com/in/fredrik-thelin-66bbb1171/"
         text="LinkedIn"
       />

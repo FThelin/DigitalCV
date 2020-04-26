@@ -14,17 +14,19 @@ const Portfolio = () => {
   const { language } = useContext(LanguageContext);
   const useStyles = createUseStyles({
     box: {
-      width: "75%",
-      margin: "0 auto",
-      height: "95vh",
+      display: "flex",
+      alignItems: "center",
+      flexDirection: "column",
     },
     heading: {
+      marginTop: "2rem",
       textAlign: "center",
       fontSize: "4rem",
     },
     text: {
       textAlign: "center",
       margin: "2rem 0",
+      padding: "0 2rem",
     },
   });
   const classes = useStyles();

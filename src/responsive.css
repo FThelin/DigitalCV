@@ -46,9 +46,6 @@
     margin-left: 5rem;
     width: 90%;
   }
-  #portfolioContainer {
-    width: 90%;
-  }
   #portfolioContainer h1 {
     font-size: 2rem;
   }
@@ -73,6 +70,9 @@
     font-size: 1.2rem;
     margin: 0 auto;
     width: 50%;
+  }
+  #portfolioContainer h1 {
+    font-size: 2rem;
   }
 }
 
