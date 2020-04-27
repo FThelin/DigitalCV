@@ -9,8 +9,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-//window.addEventListener("resize", test);
-
 const data = [
   {
     name: "HTML",
@@ -62,7 +60,7 @@ const data = [
 export default class Example extends PureComponent {
   render() {
     return (
-      <ResponsiveContainer width={"100%"} height={500} debounce={1}>
+      <ResponsiveContainer width={"100%"} height={"75%"}>
         <BarChart
           width={1100}
           height={550}

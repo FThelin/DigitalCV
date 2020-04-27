@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { createUseStyles } from "react-jss";
 import { Link } from "react-router-dom";
 import { LanguageContext } from "../context/languageContext";
+import Logo from "../assets/logomobile.png";
 
 const MobileNav = (props) => {
   const { language } = useContext(LanguageContext);
@@ -31,6 +32,11 @@ const MobileNav = (props) => {
 
   return (
     <ul className={classes.ul}>
+      <li>
+        <Link to="/" style={{ width: "2rem" }} onClick={props.closeMenu}>
+          <img src={Logo} alt="logo" style={{ height: "2rem" }} />
+        </Link>
+      </li>
       <li>
         <Link className={classes.link} to="/about" onClick={props.closeMenu}>
           {language === "sv" ? "OM MIG" : "ABOUT"}

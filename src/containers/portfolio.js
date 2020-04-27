@@ -8,7 +8,6 @@ import CiggenImage from "../assets/ciggen.JPG";
 import FlutterImage from "../assets/flutter.png";
 import { LanguageContext } from "../context/languageContext";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 
 const Portfolio = () => {
   const { language } = useContext(LanguageContext);
@@ -78,7 +77,7 @@ const Portfolio = () => {
         tools={
           <div>
             <i className="fab fa-react"></i>
-            <i class="fab fa-node-js"></i>
+            <i className="fab fa-node-js"></i>
           </div>
         }
       />

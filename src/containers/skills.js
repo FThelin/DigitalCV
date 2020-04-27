@@ -11,16 +11,28 @@ const Skills = () => {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      padding: "0 10rem",
+      height: "90vh",
     },
     heading: {
       textAlign: "center",
       fontSize: "4rem",
       marginTop: "2rem",
     },
+    "@media (max-width: 880px)": {
+      box: {
+        padding: "0",
+      },
+    },
     "@media (max-width: 400px)": {
       heading: {
         fontSize: "2rem",
         marginTop: "1rem",
+      },
+      box: {
+        padding: "0",
+        position: "relative",
+        right: "12px",
       },
     },
   });
@@ -29,7 +41,7 @@ const Skills = () => {
   return (
     <div className={classes.box}>
       <h1 className={classes.heading}>
-        {language === "sv" ? "FÄRDIGHETER" : "SKILLS"}
+        {language === "sv" ? "KOMPETENS" : "SKILLS"}
       </h1>
       <Chart />
     </div>
