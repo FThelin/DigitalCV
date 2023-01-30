@@ -1,4 +1,3 @@
-fixa warningar
-och error (när man avbryter animationen på första sidan)
+My old CV website
 
-få med loggan i mobilmenyn så man kan gå tillbaka till första sidan
+fredrikthelin.se
